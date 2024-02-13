@@ -1,0 +1,1 @@
+This directory contains the script for the task in 0x01-lockboxes.
