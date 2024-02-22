@@ -14,12 +14,10 @@ def minOperations(n):
     if n <= 1:
         return 0
     num_op = 0
-    # start from 2 'H's
-    for num in range(2, n + 1):
-        # check if num is a factor of n
+    num = 2
+    while num <= n:
         while n % num == 0:
-            # add number of smaller problems to result
             num_op += num
-            # create smaller problem: move closer to n == 1
             n //= num
+        num += 1
     return num_op
