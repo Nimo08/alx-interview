@@ -1,0 +1,1 @@
+This directory contains the scripts for the task in 0x03-log_parsing.
