@@ -6,6 +6,7 @@ Determines if a given data set represents a valid UTF-8 encoding.
 
 def validUTF8(data):
     """
+    Use bitwise operators to check through bytes
     Return: True if data is a valid UTF-8 encoding, else return False
     """
     num_bytes = 0
