@@ -1,10 +1,10 @@
 #!/usr/bin/node
 const request = require('request');
 const movieID = process.argv[2];
-const api_url = 'https://swapi-api.alx-tools.com/api/films/';
+const apiUrl = 'https://swapi-api.alx-tools.com/api/films/';
 
 if (process.argv.length > 2) {
-  request(`${api_url}${movieID}/`, (error, response, body) => {
+  request(`${apiUrl}${movieID}/`, (error, response, body) => {
     if (error) {
       console.log(error);
     }
