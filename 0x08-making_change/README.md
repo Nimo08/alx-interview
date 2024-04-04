@@ -1,0 +1,1 @@
+This directory contains the scripts for the project: 0x08-making_change.
