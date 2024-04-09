@@ -1,0 +1,1 @@
+This directory contains scripts for the project: 0x09-island_perimeter.
