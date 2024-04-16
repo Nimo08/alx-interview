@@ -4,37 +4,36 @@ Prime Game
 """
 
 
+def prime_func(n):
+    """
+    Check if number is prime
+    """
+    # list to store prime nums
+    prime_nums = []
+    is_prime = [True] * (n + 1)
+    for num in range(2, n + 1):
+        if (is_prime[num]):
+            prime_nums.append(num)
+            for i in range(num, n + 1, num):
+                is_prime[i] = False
+    return prime_nums
+
+
 def isWinner(x, nums):
     """
     Return: name of the player that won the most rounds
     """
-    def is_prime(n):
-        """
-        Check if number is prime
-        """
-        if n <= 1:
-            return False
-        if n <= 3:
-            return True
-        if n % 2 == 0 or n % 3 == 0:
-            return False
-        i = 5
-        while i * i <= n:
-            if n % i == 0 or n % (i + 2) == 0:
-                return False
-            i += 6
-        return True
-
     if x is None or nums is None or x == 0 or nums == []:
         return None
-    Maria = Ben = 0
-    for num in range(x):
-        if is_prime(nums[num]):
-            Ben += 1
+    maria_wins = ben_wins = 0
+    for a in range(x):
+        prime_num = prime_func(nums[a])
+        if len(prime_num) % 2 == 0:
+            ben_wins += 1
         else:
-            Maria += 1
-    if Maria > Ben:
+            maria_wins += 1
+    if maria_wins > ben_wins:
         return 'Maria'
-    elif Ben > Maria:
+    elif ben_wins > maria_wins:
         return 'Ben'
     return None
